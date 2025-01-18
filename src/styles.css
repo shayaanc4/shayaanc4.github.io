@@ -1,0 +1,381 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0 10vw;
+}
+
+/* Header and Navigation */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo Styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px; /* Adjust size as needed */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.header a {
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #8b0000;
+  font-size: 1.3vw;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #550000;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 3vh 0;
+  background-color: #ffffff;
+}
+
+.hero h1 {
+  font-size: 5vw;
+  color: #8b0000;
+}
+
+.hero h2 {
+  margin-top: 1vh;
+  font-size: 1.3vw;
+  color: black;
+}
+
+.hero p {
+  font-size: 1vw;
+  margin: 2vh 0 4vh;
+  color: black;
+}
+
+/* Contact*/
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2vh;
+  margin-top: 5vh;
+}
+
+.icon {
+  width: 3vw;
+  transition: transform 0.3s ease; /* Optional hover effect */
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Slightly enlarges the icon on hover */
+}
+
+.jumping-binary {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem; /* Space between the numbers */
+  margin: 10vh 0; /* Adjust spacing from other elements */
+  font-size: 4rem; /* Adjust size of the numbers */
+  font-weight: bold; /* Make the numbers stand out */
+  color: black; /* Dark red to match your theme */
+}
+
+.cta-button {
+  display: inline-block;
+  text-decoration: none;
+  background: #8b0000;
+  font-size: 1vw;
+  color: #ffffff;
+  padding: 1.5vh 3vw;
+  border-radius: 1vw;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #550000;
+}
+
+.hero-button {
+  margin-top: 5vh;
+  margin-bottom: 0vh;
+}
+
+/* Section Titles */
+h2 {
+  text-align: center;
+  font-size: 3vw;
+  margin: 14vh 0 4vh;
+  color: black;
+}
+
+/* About Section */
+.about-section {
+  text-align: center; /* Center the text horizontally */
+  margin: 20px auto; /* Optional: Add spacing around the section */
+}
+
+/* Project Grid */
+
+#projects {
+  text-align: center;
+  padding-top: 4vh;
+}
+
+.project-grid {
+  display: grid;
+  padding: 5vh;
+  padding-bottom: 2vh;
+  grid-template-columns: repeat(3, 1fr); /* 3 projects per row */
+  gap: 2vh; /* Space between grid items */
+  max-height: calc(40vh + 2vh); /* Show only 1 row (adjust height as needed) */
+  overflow: hidden; /* Hide additional rows */
+  transition: max-height 1s ease;
+  justify-content: center;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures footer stays at the bottom */
+  border: 2px solid #8b0000;
+  padding: 2vh 2vw;
+  text-align: center;
+  border-radius: 5px;
+  transition: transform 0.3s;
+  height: 100%; /* Ensures consistent height for all cards */
+}
+
+.project-card h3 {
+  color: black;
+  margin-bottom: 2vh;
+}
+
+.project-card p {
+  flex-grow: 1; /* Fills available space */
+  margin-bottom: 2vh;
+}
+
+.project-footer {
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #8b0000;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project-card a:hover {
+  color: #550000;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-tags {
+  margin-top: 1vh; /* Add some spacing between description and tags */
+  margin-bottom: 1vh;
+  display: flex; /* Align tags in a row */
+  flex-wrap: wrap; /* Allow tags to wrap to the next line if needed */
+  gap: 0.5vw; /* Add spacing between tags */
+  justify-content: center; /* Center the tags within the card */
+}
+
+.tag {
+  background-color: #8b0000; /* Background color for the tag */
+  color: #ffffff; /* Text color */
+  font-size: 0.7vw; /* Adjust font size */
+  padding: 0.3vh 1vw; /* Add padding for better spacing */
+  border-radius: 10px; /* Rounded corners */
+  text-transform: capitalize; /* Capitalize first letter of each tag */
+  font-weight: 500; /* Slightly bold text */
+  white-space: nowrap; /* Prevent tags from breaking into multiple lines */
+  transition: transform 0.2s ease, background-color 0.3s ease; /* Add hover effects */
+}
+
+.tag:hover {
+  background-color: #550000; /* Darker red on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.project-button {
+  margin-top: 5vh; /* Project-specific margin */
+  margin-bottom: 10vh;
+}
+
+.project-page {
+  display: flex;
+  flex-direction: column; /* Ensures content stacks vertically */
+  align-items: flex-start;
+}
+
+.project-page h2 {
+  align-self: center;
+}
+
+.project-page .cta-button {
+  margin-top: 5vh;
+  text-align: center;
+  display: inline-block;
+  align-self: center;
+}
+
+/* Blog Page Styles */
+.blog-page {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.blog-page h2 {
+  font-size: 2rem;
+  margin-top: 1vh;
+  margin-bottom: 2rem;
+  color: #8b0000; /* Dark red for headers */
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Space between posts */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-post {
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.blog-post h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.post-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.blog-button {
+  font-size: 1rem;
+  margin-top: 1vh;
+  display: inline-block;
+  align-self: center;
+}
+
+/* Blog Post Styling */
+.blog-post-page {
+  max-width: 800px;
+  margin: 0 auto; /* Center the post */
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  line-height: 1.8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.blog-post-page h2 {
+  font-size: 2.5rem;
+  color: #8b0000; /* Dark red for emphasis */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.blog-post-page .post-date {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.blog-post-page p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.blog-post-page pre {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto; /* Horizontal scroll for long code */
+  border: 1px solid #ddd;
+  font-family: "Courier New", monospace;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.blog-post-page pre code {
+  color: #550000; /* Slightly darker red for the code text */
+}
+
+.blog-post-page .cta-button {
+  text-align: center;
+  display: inline-block;
+  align-self: center;
+}
+
+.blog-post-page .cta-button:hover {
+  background-color: #550000; /* Darker shade on hover */
+}
+
+/* Adjust margins for readability */
+.blog-post-page p:last-of-type {
+  margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 5vh 0;
+  margin-top: 10vh;
+  border-top: 1px solid #ddd;
+  color: #555555;
+}
